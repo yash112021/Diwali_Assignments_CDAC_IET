@@ -1,0 +1,72 @@
+package dom.demo.Test;
+
+import java.util.Scanner;
+
+import com.demo.service.ServiceInterface;
+import com.demo.service.ServiceInterfaceImpl;
+
+public class Test1 {
+		public static void main(String args[]) {
+			
+			Scanner sc=new Scanner(System.in);
+			
+			// making the object of service class by using the interface the refernce object
+			ServiceInterface serv=new ServiceInterfaceImpl();
+			
+			// pratice Questions
+			
+			// making the switch case
+			int choice =0;
+			
+			System.out.println("Enter your choice ");
+			do {
+				
+				System.out.println("\n1. Check if a Number is Prime \n2. Generate a Prime Number upto N");
+				System.out.println("\n3. Calcualate Factorial of a Number \n4. Generate Fibonaci Series upto N");
+				System.out.println("\n5. Check if a Number is even or Odd \n <-- Enter your choice -->");
+				
+				// switch case
+				
+				switch (choice ) {
+				
+				
+					// check if a Number is prime or not
+					case 1 ->{
+						System.out.println("Enter the Number to check Whether it is Prime Number or Not");
+						int n =sc.nextInt();
+						boolean status=serv.checkPrime(n);
+						if(status) {
+							System.out.println(" Prime Number ");
+						}else {
+							System.out.println(" NOT A PRiME NUMBER");
+						}
+					}
+//					case 2 ->{
+//						
+//					}
+//					case 3 ->{
+//						
+//					}
+//					case 4 ->{
+//						
+//					}
+//					case 5 ->{
+//						
+//					}
+//					case 6 ->{
+//						
+//					}
+				
+				} // swtich close 
+				
+				choice=sc.nextInt();
+				
+				
+				
+				
+			} while(choice != 6);
+			
+			
+			
+		}
+}

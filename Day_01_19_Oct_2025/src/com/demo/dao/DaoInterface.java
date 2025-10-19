@@ -1,0 +1,15 @@
+package com.demo.dao;
+
+public interface DaoInterface {
+
+	boolean checkPrime(int n);
+
+	int fact(int z);
+
+	int[] resfib(int n);
+
+	boolean evenOdd(int n);
+
+	int[] primeNumberArr(int n);
+
+}

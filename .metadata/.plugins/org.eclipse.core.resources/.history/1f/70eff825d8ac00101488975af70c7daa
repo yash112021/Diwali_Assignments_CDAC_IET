@@ -1,0 +1,23 @@
+package com.demo.dao;
+
+public class DaoInterfaceImpl  implements DaoInterface {
+
+	
+	// writing the logic part for the checkprime 
+	@Override
+	public boolean checkPrime(int n) {
+		if(n==2) {
+			return true;
+		}
+		//for loop 
+		for(int i=2; i<n;i++) {
+			if(i%2==0) {
+				return false;
+			}
+		}
+		
+		
+		return true ;
+	}
+
+}

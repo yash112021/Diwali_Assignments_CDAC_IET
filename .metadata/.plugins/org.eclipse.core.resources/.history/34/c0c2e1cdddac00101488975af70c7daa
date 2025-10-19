@@ -1,0 +1,44 @@
+package com.demo.service;
+
+import java.util.Scanner;
+
+import com.demo.dao.DaoInterface;
+import com.demo.dao.DaoInterfaceImpl;
+
+public class ServiceInterfaceImpl implements ServiceInterface{
+	Scanner sc=new Scanner(System.in);
+	
+	// making the object of the dao inside the constructor 
+	DaoInterface edao;
+	
+	// default constructor 
+	public ServiceInterfaceImpl() {
+		//		super();
+		edao =new DaoInterfaceImpl();
+	}
+
+	
+	// check prime Number
+	@Override
+	public boolean checkPrime(int n) {
+		
+		return edao.checkPrime(n);
+	}
+
+	// factoiral number
+	@Override
+	public int fact(int z) {
+		
+		return edao.fact(z);
+	}
+
+	// fibonanci series 
+	@Override
+	public int[] fibonacii(int n) {
+		
+		return edao.resfib(n);
+	}
+	
+	
+
+}

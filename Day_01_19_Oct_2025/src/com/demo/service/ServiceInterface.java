@@ -1,0 +1,15 @@
+package com.demo.service;
+
+public interface ServiceInterface {
+
+	boolean checkPrime(int n);
+
+	int fact(int z);
+
+	int[] fibonacii(int n);
+
+	boolean EvenOdd(int n);
+
+	int[] primeArray(int n);
+
+}
